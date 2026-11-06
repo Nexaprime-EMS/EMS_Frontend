@@ -1,0 +1,611 @@
+/* ==========================================================================
+   AUTH Shared Canvas Styles (1440x1024)
+   Canvas Dimensions: Width 1440px | Height 1024px
+   Palette:
+     - #4B5563 (Muted text)
+     - #2563EA (EMS Brand Primary)
+     - #FEFEFE (Right canvas background)
+     - #1F2937 (Dark headings & text)
+     - #F2F6F8 (Left panel background)
+     - #E2E8F0 (Outer viewport background)
+   ========================================================================== */
+
+/* Outer Viewport Wrapper: Centers the exact 1440x1024 Canvas */
+.authPageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+/* Exact 1440x1024 Canvas Container */
+.authCanvas {
+  width: 1440px;
+  height: 1024px;
+  min-width: 1440px;
+  min-height: 1024px;
+  max-width: 1440px;
+  max-height: 1024px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  background-color: #FEFEFE;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Left Panel (Width 720px, Height 100% of Canvas, Background #F2F6F8)
+   -------------------------------------------------------------------------- */
+.leftPanel {
+  width: 720px;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #F2F6F8;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px 60px 44px 60px;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Header Branding */
+.brandHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brandLogoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  color: #2563EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandTitle {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #2563EA;
+  line-height: 1;
+  margin: 0;
+}
+
+.brandSubtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F2937;
+  letter-spacing: -0.01em;
+  margin: 0;
+  padding-left: 2px;
+}
+
+/* Illustration & Pillars Area */
+.illustrationArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.illustrationWrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.illustrationImage {
+  width: 475px;
+  height: 463px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.pillarRow {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563;
+  text-align: center;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.pillarSeparator {
+  margin: 0 10px;
+  color: #4B5563;
+  opacity: 0.6;
+}
+
+/* Left Footer Copyright */
+.copyrightText {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4B5563;
+  margin: 0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Right Panel (Width 720px, Height 1024px, Background #FEFEFE)
+   -------------------------------------------------------------------------- */
+.rightPanel {
+  width: 720px;
+  height: 1024px;
+  min-height: 1024px;
+  max-height: 1024px;
+  background-color: #FEFEFE;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 100px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Headings */
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0 0 32px 0;
+}
+
+/* Forms & Inputs */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.inputLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+  height: 45px;
+  padding: 12px 14px;
+  background: #FEFEFE;
+  border: 1px solid #CDD6E1;
+  border-radius: 8px;
+  color: #1F2937;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.textInput::placeholder {
+  color: #9CA3AF;
+}
+
+.textInput:focus {
+  border-color: #2563EA;
+  box-shadow: 0 0 0 3px rgba(37, 99, 234, 0.12);
+}
+
+.textInputWithPrefix {
+  padding-left: 42px;
+}
+
+.textInputWithSuffix {
+  padding-right: 42px;
+}
+
+.iconPrefix {
+  position: absolute;
+  left: 14px;
+  color: #95A1B6;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.iconSuffix {
+  position: absolute;
+  right: 14px;
+  color: #95A1B6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.iconSuffix:hover {
+  color: #4B5563;
+}
+
+/* Buttons */
+.submitButton {
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  background-color: #2563EA;
+  color: #FEFEFE;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 234, 0.25);
+  text-decoration: none;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 234, 0.35);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  margin-top: 12px;
+  width: 100%;
+  height: 45px;
+  background-color: #FEFEFE;
+  color: #1F2937;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.secondaryButton:hover {
+  background-color: #F8FAFC;
+  border-color: #CDD6E1;
+}
+
+/* OTP Verification UI */
+.otpContainer {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.otpBox {
+  width: 52px;
+  height: 58px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2563EA;
+  outline: none;
+  background-color: #FEFEFE;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.otpBox:focus,
+.otpBoxActive {
+  border-color: #2563EA;
+  box-shadow: 0 0 0 3px rgba(37, 99, 234, 0.12);
+}
+
+.resendRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #495668;
+  margin: 12px 0 20px 0;
+  width: 100%;
+}
+
+.resendLink {
+  color: #2563EA;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.resendLink:hover {
+  text-decoration: underline;
+}
+
+/* Other Options Card (AUTH-04) */
+.otherOptionsCard {
+  width: 100%;
+  background-color: #F2F6F8;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+
+.otherOptionsHeader {
+  font-size: 11px;
+  font-weight: 700;
+  color: #495668;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.otherOptionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.otherOptionItem:last-child {
+  margin-bottom: 0;
+}
+
+.otherOptionIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #FEFEFE;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1F2937;
+  flex-shrink: 0;
+}
+
+.otherOptionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.otherOptionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.otherOptionSubtitle {
+  font-size: 12px;
+  color: #4B5563;
+}
+
+/* Password Strength Meter (AUTH-05 & AUTH-06) */
+.passwordStrengthWrapper {
+  width: 100%;
+  margin: 6px 0 16px 0;
+}
+
+.strengthHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.strengthLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.strengthValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1CA24A;
+}
+
+.strengthBars {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strengthBar {
+  flex: 1;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #E2E8F0;
+  transition: background-color 0.3s ease;
+}
+
+.strengthBarActive {
+  background-color: #23C662;
+}
+
+.strengthHint {
+  font-size: 12px;
+  color: #95A1B6;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Feedback Messages */
+.errorMessage {
+  padding: 10px 14px;
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  border-radius: 8px;
+  color: #DC2626;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.successMessage {
+  padding: 10px 14px;
+  background: #F0FDF4;
+  border: 1px solid #86EFAC;
+  border-radius: 8px;
+  color: #16A34A;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Session Expired UI (AUTH-07) */
+.sessionExpiredWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+.sessionGraphicWrapper {
+  position: relative;
+  width: 154px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.sessionLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sessionNoticeBox {
+  width: 100%;
+  background-color: #F2F6F8;
+  border: 1px solid #FEDCDB;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  box-sizing: border-box;
+  margin: 8px 0 24px 0;
+}
+
+.sessionNoticeIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F55916;
+  color: #FEFEFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sessionNoticeContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.sessionNoticeTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.sessionNoticeSubtitle {
+  font-size: 12px;
+  color: #F55916;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.sessionNoticeDesc {
+  font-size: 12px;
+  color: #9CA3AF;
+  margin-top: 4px;
+}

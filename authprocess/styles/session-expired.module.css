@@ -1,0 +1,178 @@
+/* ==========================================================================
+   AUTH-07 Session Expired Styles
+   Canvas: 1440 x 1024   |   Right Panel: 720 x 1024
+   Palette: #2563EA, #F2F6F8, #FEFEFE, #4B5563, #F55916, #1F2937, #9CA3AF, #E2E8F0, #FEDCDB
+   ========================================================================== */
+
+.pageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.canvas {
+  width: 1440px;
+  height: 1024px;
+  min-width: 1440px;
+  min-height: 1024px;
+  max-width: 1440px;
+  max-height: 1024px;
+  display: flex;
+  flex-direction: row;
+  background-color: #FEFEFE;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.rightPanel {
+  width: 720px;
+  height: 1024px;
+  min-height: 1024px;
+  max-height: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 100px;
+  background-color: #FEFEFE;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sessionExpiredWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Session Expired Logo Wrapper */
+.sessionGraphicWrapper {
+  position: relative;
+  width: 154px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.sessionLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+/* Session Expired Message Notice Box */
+.sessionNoticeBox {
+  width: 100%;
+  background-color: #F2F6F8;
+  border: 1px solid #FEDCDB;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  box-sizing: border-box;
+  margin: 8px 0 24px 0;
+}
+
+.sessionNoticeIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F55916;
+  color: #FEFEFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sessionNoticeContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.sessionNoticeTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.sessionNoticeSubtitle {
+  font-size: 12px;
+  color: #F55916;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.sessionNoticeDesc {
+  font-size: 12px;
+  color: #9CA3AF;
+  margin-top: 4px;
+}
+
+.submitButton {
+  width: 100%;
+  height: 48px;
+  background-color: #2563EA;
+  color: #FEFEFE;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 234, 0.25);
+  text-decoration: none;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 234, 0.35);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

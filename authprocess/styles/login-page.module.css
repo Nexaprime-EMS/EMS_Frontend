@@ -1,0 +1,372 @@
+/* ==========================================================================
+   AUTH-02 Login Page Styles
+   Canvas: 1440 x 960   |   Left Panel: 720 x 960   |   Right Panel: 720 x 960
+   Palette:
+     - #1F2937 (dark text/titles)
+     - #4B5563 (muted text/placeholders)
+     - #FEFEFE (canvas/input background)
+     - #CDD6E1 (borders)
+     - #2563EA (primary blue brand)
+     - #70A3F8 (trust icon blue)
+     - #95A1B6 (icons/toggle)
+     - #9CA3AF (secondary icon/text)
+     - #F2F6F8 (left panel background & trust badge fill)
+   ========================================================================== */
+
+/* ── Page Wrapper ── */
+.loginPageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+/* ── Canvas (1440 x 960) ── */
+.loginCanvas {
+  width: 1440px;
+  height: 960px;
+  min-width: 1440px;
+  min-height: 960px;
+  max-width: 1440px;
+  max-height: 960px;
+  display: flex;
+  flex-direction: row;
+  background-color: #FEFEFE;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   LEFT PANEL (Width 720px, Height 960px, Background #F2F6F8)
+   ========================================================================== */
+.leftPanel {
+  width: 720px;
+  height: 960px;
+  min-height: 960px;
+  max-height: 960px;
+  background-color: #F2F6F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px 60px 44px 60px;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Copyright line in Left Panel bottom-left */
+.copyrightText {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4B5563;
+  margin: 0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* ==========================================================================
+   RIGHT PANEL (Width 720px, Height 960px)
+   ========================================================================== */
+.rightPanel {
+  width: 720px;
+  height: 960px;
+  min-height: 960px;
+  max-height: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 100px;
+  background-color: #FEFEFE;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* ── Welcome Heading ── */
+.welcomeHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+/* ── Subtitle ── */
+.welcomeSubtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: #4B5563;
+  margin: 0 0 40px 0;
+}
+
+/* ── Login Form ── */
+.loginForm {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Input Group ── */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* ── Input Label ── */
+.inputLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+  line-height: 20px;
+}
+
+/* ── Input Wrapper ── */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* ── Text Input ── */
+.textInput {
+  width: 100%;
+  height: 45px;
+  padding: 12px 14px;
+  background: #FEFEFE;
+  border: 1px solid #CDD6E1;
+  border-radius: 6px;
+  color: #1F2937;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textInput::placeholder {
+  color: #9CA3AF;
+}
+
+.textInput:focus {
+  border-color: #2563EA;
+  box-shadow: 0 0 0 3px rgba(37, 99, 234, 0.12);
+}
+
+.textInputError {
+  border-color: #EF4444;
+}
+
+.textInputError:focus {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* ── Password Toggle ── */
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #95A1B6;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.passwordToggle:hover {
+  color: #4B5563;
+}
+
+/* ── Options Row ── */
+.optionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── Remember Me ── */
+.rememberLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.rememberCheckbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563EA;
+  cursor: pointer;
+  border: 1px solid #CDD6E1;
+  border-radius: 4px;
+  background-color: #FEFEFE;
+}
+
+/* ── Forgot Password Link ── */
+.forgotLink {
+  font-size: 14px;
+  color: #2563EA;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forgotLink:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* ── Submit Button ── */
+.submitButton {
+  width: 100%;
+  height: 48px;
+  background-color: #2563EA;
+  color: #FEFEFE;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 234, 0.25);
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 234, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Trust Badge ── */
+.trustBadge {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #F2F6F8;
+  border: 1px solid #CDD6E1;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+.trustIcon {
+  width: 28px;
+  height: 28px;
+  color: #70A3F8;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trustText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trustTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.trustSubtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4B5563;
+}
+
+/* ── Feedback Messages ── */
+.errorMessage {
+  padding: 10px 14px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  color: #DC2626;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.successMessage {
+  padding: 10px 14px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 8px;
+  color: #16A34A;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.fieldError {
+  font-size: 12px;
+  color: #EF4444;
+  margin-top: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #FEFEFE;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}

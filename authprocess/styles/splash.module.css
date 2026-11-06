@@ -1,0 +1,340 @@
+/* ==========================================================================
+   AUTH-01 Splash Screen Styles
+   Canvas Dimensions: Width 1440px | Height 960px
+   Right Panel Palette: #FEFEFE, #1F2937, #2563EA
+   ========================================================================== */
+
+/* Outer Viewport Wrapper: Centers the exact 1440x960 Canvas */
+.splashPageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+/* Exact 1440x960 Canvas Container */
+.splashCanvas {
+  width: 1440px;
+  height: 960px;
+  min-width: 1440px;
+  min-height: 960px;
+  max-width: 1440px;
+  max-height: 960px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  background-color: #FEFEFE;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Left Panel (Width 720px, Height 960px, Background #F2F6F8)
+   -------------------------------------------------------------------------- */
+.leftPanel {
+  width: 720px;
+  height: 960px;
+  min-height: 960px;
+  max-height: 960px;
+  background-color: #F2F6F8;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px 60px 44px 60px;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Header Branding */
+.brandHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brandLogoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  color: #2563EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.brandTitle {
+  width: 66px;
+  height: 36px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #2563EA;
+  line-height: 1;
+  margin: 0;
+}
+
+.brandSubtitle {
+  width: 467px;
+  height: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F2937;
+  letter-spacing: -0.01em;
+  margin: 0;
+  padding-left: 2px;
+}
+
+/* Illustration & Pillars Area */
+.illustrationArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.illustrationWrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.illustrationImage {
+  width: 475px;
+  height: 463px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.pillarRow {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563;
+  text-align: center;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.pillarSeparator {
+  margin: 0 10px;
+  color: #4B5563;
+  opacity: 0.6;
+}
+
+/* Left Footer Copyright */
+.copyrightText {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4B5563;
+  margin: 0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Right Panel (Width 720px, Height 960px, Background #FEFEFE)
+   Colors: #FEFEFE, #1F2937, #2563EA
+   -------------------------------------------------------------------------- */
+.rightPanel {
+  width: 720px;
+  height: 960px;
+  min-height: 960px;
+  max-height: 960px;
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Welcome Frame */
+.welcomeFrame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.welcomeHeading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Continue Button */
+.continueButton {
+  width: 260px;
+  height: 56px;
+  background-color: #2563EA;
+  color: #FEFEFE;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(37, 99, 234, 0.25);
+}
+
+.continueButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 234, 0.35);
+}
+
+.continueButton:active {
+  transform: translateY(0);
+}
+
+.arrowIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.continueButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+/* Role portal quick trigger - removed underline below continue button */
+.roleSelectorTrigger {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  color: #1F2937;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none; /* Removed line below continue button */
+  transition: color 0.2s;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.roleSelectorTrigger:hover {
+  color: #2563EA;
+  text-decoration: none;
+}
+
+/* Role Dropdown / Modal Overlay */
+.roleModalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.2s ease;
+}
+
+.roleModalCard {
+  width: 90%;
+  max-width: 520px;
+  background: #FEFEFE;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.roleModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roleModalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #1F2937;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.roleListGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.roleLinkCard {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  background: #FEFEFE;
+  text-decoration: none;
+  color: #1F2937;
+  transition: all 0.2s ease;
+}
+
+.roleLinkCard:hover {
+  border-color: #2563EA;
+  background: #EFF6FF;
+  transform: translateY(-2px);
+}
+
+.roleLinkName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.roleLinkScreen {
+  font-size: 11px;
+  color: #1F2937;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

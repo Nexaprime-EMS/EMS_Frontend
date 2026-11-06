@@ -1,0 +1,245 @@
+/* ==========================================================================
+   AUTH-04 OTP Verification Styles
+   Canvas: 1440 x 1024   |   Right Panel: 720 x 1024
+   Palette: #FEFEFE, #E2E8F0, #1F2937, #4B5563, #2563EA, #495668, #F2F6F8
+   ========================================================================== */
+
+.pageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.canvas {
+  width: 1440px;
+  height: 1024px;
+  min-width: 1440px;
+  min-height: 1024px;
+  max-width: 1440px;
+  max-height: 1024px;
+  display: flex;
+  flex-direction: row;
+  background-color: #FEFEFE;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.rightPanel {
+  width: 720px;
+  height: 1024px;
+  min-height: 1024px;
+  max-height: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 100px;
+  background-color: #FEFEFE;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 480px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.otpContainer {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.otpBox {
+  width: 52px;
+  height: 58px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2563EA;
+  outline: none;
+  background-color: #FEFEFE;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.otpBox:focus,
+.otpBoxActive {
+  border-color: #2563EA;
+  box-shadow: 0 0 0 3px rgba(37, 99, 234, 0.12);
+}
+
+.resendRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #495668;
+  margin: 12px 0 20px 0;
+  width: 100%;
+}
+
+.resendLink {
+  color: #2563EA;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.resendLink:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  background-color: #2563EA;
+  color: #FEFEFE;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 234, 0.25);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 234, 0.35);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.otherOptionsCard {
+  width: 100%;
+  background-color: #F2F6F8;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+
+.otherOptionsHeader {
+  font-size: 11px;
+  font-weight: 700;
+  color: #495668;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.otherOptionItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.otherOptionItem:last-child {
+  margin-bottom: 0;
+}
+
+.otherOptionIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #FEFEFE;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1F2937;
+  flex-shrink: 0;
+}
+
+.otherOptionContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.otherOptionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.otherOptionSubtitle {
+  font-size: 12px;
+  color: #4B5563;
+}
+
+.errorMessage {
+  padding: 10px 14px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  color: #DC2626;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.successMessage {
+  padding: 10px 14px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 8px;
+  color: #16A34A;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
