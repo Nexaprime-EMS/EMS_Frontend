@@ -4,6 +4,22 @@
 
 export const AUTH_ROUTES = {
   SPLASH: "/",
+  DASHBOARD: "/dashboard",
+  DASHBOARD_ANALYTICS: "/dashboard-analytics",
+  REPORTS: {
+    DASHBOARD_ANALYTICS: "/dashboard-analytics",
+    EMPLOYEE_REPORTS: "/employee-reports",
+    ATTENDANCE_REPORTS: "/attendance-reports",
+    LEAVE_REPORTS: "/leave-reports",
+    PROJECT_REPORTS: "/project-reports",
+    TASK_REPORTS: "/task-reports",
+    PRODUCTIVITY_REPORTS: "/productivity-reports",
+    DEPARTMENT_REPORTS: "/department-reports",
+    TEAM_REPORTS: "/team-reports",
+    CUSTOM_REPORTS: "/custom-reports",
+    SCHEDULED_REPORTS: "/scheduled-reports",
+    EXPORT_CENTER: "/export-center",
+  },
   LOGIN: {
     SUPER_ADMIN: "/auth/super-admin/login",
     TEAM_LEADER: "/auth/team-leader/login",

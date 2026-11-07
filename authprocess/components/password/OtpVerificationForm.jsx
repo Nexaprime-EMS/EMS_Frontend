@@ -13,7 +13,7 @@ export default function OtpVerificationForm({
   const router = useRouter();
   const [digits, setDigits] = useState(["", "", "", "", "", ""]);
   const [timer, setTimer] = useState(45);
-  const [canResend, setCanResend] = useState(false);
+  const canResend = timer === 0;
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
@@ -24,8 +24,6 @@ export default function OtpVerificationForm({
     if (timer > 0) {
       const interval = setInterval(() => setTimer((t) => t - 1), 1000);
       return () => clearInterval(interval);
-    } else {
-      setCanResend(true);
     }
   }, [timer]);
 
